@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOD. | Music for Every Feeling</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.vinyl.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg mood-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MOOD<span>.</span></a>
+
+            <button class="navbar-toggler bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moods.html">Moods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="genres.html">Genres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albums.html">Albums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="discover.html">Discover</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <!-- THREE SPINNING VINYL RECORDS -->
+        <div class="home-vinyls" aria-hidden="true">
+            <div class="home-vinyl home-vinyl-top"></div>
+            <div class="home-vinyl home-vinyl-middle"></div>
+            <div class="home-vinyl home-vinyl-bottom"></div>
+        </div>
+
+        <div class="container hero-content">
+            <p class="hero-small">Music for every feeling</p>
+
+            <h1>
+                YOUR MOOD.<br>
+                YOUR <span>MUSIC.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover music based on how you feel.
+                Explore moods, artists, genres and albums
+                and find the perfect sound for every moment.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+                <a href="discover.html" class="mood-button">Find my music</a>
+                <a href="moods.html" class="mood-button button-outline">Explore moods</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section-space">
+        <div class="container">
+            <p class="section-label">Start with emotion</p>
+            <h2 class="section-title">How do you feel today?</h2>
+
+            <p class="section-text mb-5">
+                Sometimes you don't know which artist or genre
+                you want. You only know how you feel.
+                Start there.
+            </p>
+
+            <div class="mood-grid" id="homeMoodChoices">
+
+                <article class="mood-card love" data-home-mood="love"
+                         tabindex="0" role="button"
+                         aria-label="Choose In Love mood">
+                    <div class="mood-symbol">♥</div>
+                    <h3>In Love</h3>
+                    <p>Warm, romantic and soft sounds.</p>
+                </article>
+
+                <article class="mood-card heartbreak" data-home-mood="heartbreak"
+                         tabindex="0" role="button"
+                         aria-label="Choose Heartbreak mood">
+                    <div class="mood-symbol">♡</div>
+                    <h3>Heartbreak</h3>
+                    <p>Songs for the feelings you can't explain.</p>
+                </article>
+
+                <article class="mood-card night" data-home-mood="night"
+                         tabindex="0" role="button"
+                         aria-label="Choose Late Night mood">
+                    <div class="mood-symbol">☾</div>
+                    <h3>Late Night</h3>
+                    <p>Atmospheric music after midnight.</p>
+                </article>
+
+            </div>
+
+            <div id="homeRecommendations" class="music-results mt-4"
+                 aria-live="polite" hidden>
+                <h3 class="music-results-title">
+                    Your music match <span id="homeMoodName"></span>
+                </h3>
+                <div id="homeSongs" class="music-song-grid"></div>
+            </div>
+
+            <div class="mt-5">
+                <a href="moods.html" class="mood-button button-outline">
+                    View all moods
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-space bg-black">
+        <div class="container">
+            <p class="section-label">Listen now</p>
+            <h2 class="section-title">Artists on repeat.</h2>
+
+            <div class="row g-4 mt-3">
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="artist-card">
+                        <img src="photo/sza.webp" alt="SZA" class="artist-image">
+                        <div class="artist-info">
+                            <h3>SZA</h3>
+                            <p>R&B · Soul</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="artist-card">
+                        <img src="photo/the.png" alt="The Weeknd" class="artist-image">
+                        <div class="artist-info">
+                            <h3>The Weeknd</h3>
+                            <p>Pop · R&B</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="artist-card">
+                        <img src="photo/frank.jpg" alt="Frank Ocean" class="artist-image">
+                        <div class="artist-info">
+                            <h3>Frank Ocean</h3>
+                            <p>Alternative R&B</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="artist-card">
+                        <img src="photo/billie.webp" alt="Billie Eilish" class="artist-image">
+                        <div class="artist-info">
+                            <h3>Billie Eilish</h3>
+                            <p>Pop · Alternative</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-strip">
+        <div class="container">
+            <p class="text-uppercase fw-semibold">MOOD. DISCOVERY</p>
+            <h2>Every feeling<br>has a sound.</h2>
+            <a href="discover.html" class="btn btn-dark rounded-pill px-4 py-3 mt-3">
+                Discover yours →
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-logo">MOOD.</div>
+        <p class="mb-0">Every feeling has a sound.</p>
+        <p class="mb-0">© 2026 MOOD.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="student1.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
