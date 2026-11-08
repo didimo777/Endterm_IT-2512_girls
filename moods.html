@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moods | MOOD.</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg mood-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MOOD<span>.</span></a>
+
+            <button class="navbar-toggler bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="moods.html">Moods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="genres.html">Genres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albums.html">Albums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="discover.html">Discover</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-header">
+        <div class="container">
+            <p class="section-label">Start with a feeling</p>
+            <h1>MOODS.</h1>
+            <p class="section-text">
+                Your playlist doesn't always need a genre.
+                Choose how you feel and discover music
+                that matches the moment.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-space">
+        <div class="container">
+
+            <div class="music-controls mb-4">
+                <label class="form-label" for="moodSearch">
+                    Find a feeling
+                </label>
+
+                <input class="form-control music-search"
+                       id="moodSearch" type="search"
+                       placeholder="Search moods..."
+                       autocomplete="off">
+
+                <div class="music-filter-row mt-3"
+                     id="moodFilters" aria-label="Mood categories">
+
+                    <button type="button" class="music-filter is-active"
+                            data-filter="all" aria-pressed="true">
+                        All
+                    </button>
+
+                    <button type="button" class="music-filter"
+                            data-filter="positive" aria-pressed="false">
+                        Positive
+                    </button>
+
+                    <button type="button" class="music-filter"
+                            data-filter="relaxing" aria-pressed="false">
+                        Relaxing
+                    </button>
+
+                    <button type="button" class="music-filter"
+                            data-filter="emotional" aria-pressed="false">
+                        Emotional
+                    </button>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap mt-3">
+                    <p class="mb-0" id="moodCount" aria-live="polite"></p>
+
+                    <button type="button" id="sortMoods" class="music-filter">
+                        Sort A–Z
+                    </button>
+                </div>
+            </div>
+
+            <div class="mood-grid" id="moodCatalog"></div>
+
+            <p id="moodEmpty" class="music-empty" hidden>
+                No moods found. Try another word.
+            </p>
+
+            <div id="moodDetails" class="music-results mt-4"
+                 hidden aria-live="polite">
+
+                <button type="button" id="closeMoodDetails"
+                        class="music-filter mb-3">
+                    Close recommendations ×
+                </button>
+
+                <h2 class="music-results-title" id="moodDetailsTitle"></h2>
+                <p id="moodDetailsDescription"></p>
+                <div id="moodSongs" class="music-song-grid"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="feature-strip">
+        <div class="container text-center">
+            <p class="text-uppercase fw-semibold">Can't choose?</p>
+            <h2>Tell us how you feel.</h2>
+
+            <a href="discover.html" class="btn btn-dark rounded-pill px-4 py-3 mt-3">
+                Find my music →
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-logo">MOOD.</div>
+        <p class="mb-0">Choose a feeling. Find a sound.</p>
+        <p class="mb-0">© 2026 MOOD.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="student1.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
