@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | MOOD.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg mood-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MOOD<span>.</span></a>
+            <button class="navbar-toggler bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moods.html">Moods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="genres.html">Genres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albums.html">Albums</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="discover.html">Discover</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="page-header">
+        <div class="container">
+            <p class="section-label">Made for your feelings</p>
+            <h1>DISCOVER.</h1>
+            <p class="section-text">
+                Tell us how you feel, and we'll find music
+                that matches your moment.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-space">
+        <div class="container">
+            <div class="s3-form-layout">
+
+                <div>
+                    <p class="section-label">Your personal soundtrack</p>
+                    <h2 class="section-title">Let's find your sound.</h2>
+                    <p class="section-text">
+                        Choose your mood, favorite genre and energy level.
+                        MOOD. will recommend songs based on your choices.
+                    </p>
+
+                    <div class="s3-discover-note">
+                        <span>01</span> Choose your feeling
+                        <hr>
+                        <span>02</span> Tell us what you like
+                        <hr>
+                        <span>03</span> Discover your music
+                    </div>
+                </div>
+
+                <div class="s3-form-card">
+                    <form id="musicMatchForm" novalidate>
+
+                        <div class="mb-3">
+                            <label for="listenerName" class="form-label">Your name</label>
+                            <input type="text" class="form-control s3-input"
+                                   id="listenerName" maxlength="40"
+                                   placeholder="Enter your name">
+                            <div class="s3-error" id="nameError"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listenerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control s3-input"
+                                   id="listenerEmail"
+                                   placeholder="example@email.com">
+                            <div class="s3-error" id="emailError"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listenerMood" class="form-label">Your mood</label>
+                            <select class="form-select s3-input" id="listenerMood">
+                                <option value="">Choose your mood</option>
+                                <option value="Happy">Happy</option>
+                                <option value="Calm">Calm</option>
+                                <option value="Emotional">Emotional</option>
+                                <option value="Energetic">Energetic</option>
+                                <option value="Romantic">Romantic</option>
+                            </select>
+                            <div class="s3-error" id="moodError"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listenerGenre" class="form-label">Favorite genre</label>
+                            <select class="form-select s3-input" id="listenerGenre">
+                                <option value="">Choose a genre</option>
+                                <option value="R&B">R&B</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Hip-Hop">Hip-Hop</option>
+                                <option value="Alternative">Alternative</option>
+                                <option value="Electronic">Electronic</option>
+                            </select>
+                            <div class="s3-error" id="genreError"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listenerActivity" class="form-label">What are you doing?</label>
+                            <select class="form-select s3-input" id="listenerActivity">
+                                <option value="">Choose an activity</option>
+                                <option value="Studying">Studying</option>
+                                <option value="Relaxing">Relaxing</option>
+                                <option value="Walking">Walking</option>
+                                <option value="Working out">Working out</option>
+                                <option value="Traveling">Traveling</option>
+                            </select>
+                            <div class="s3-error" id="activityError"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listenerEnergy" class="form-label">
+                                Energy level: <span id="energyValue">5</span>/10
+                            </label>
+                            <input type="range" class="form-range"
+                                   id="listenerEnergy" min="1" max="10" value="5">
+                            <div class="s3-error" id="energyError"></div>
+                        </div>
+
+                        <button type="submit" class="s3-submit">
+                            Find My Music →
+                        </button>
+                        <p id="formSuccess"
+   class="mt-3"
+   style="color:#a5e7b8"
+   role="status"
+   aria-live="polite"></p>
+
+                        <p class="s3-form-hint">
+                            Your answers are processed in your browser.
+                            No account is required.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <section id="matchResults" class="s3-panel s3-match-results mt-5"
+                     hidden aria-live="polite">
+                <p class="section-label">Your personal match</p>
+                <h2 id="matchTitle"></h2>
+                <p id="matchDescription"></p>
+                <p id="matchScore"></p>
+                <div id="matchSongs" class="s3-track-list"></div>
+                <button type="button" id="newMatch" class="s3-filter mt-4">
+                    Create another match ↻
+                </button>
+            </section>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-logo">MOOD.</div>
+        <p class="mb-0">Every feeling has a sound.</p>
+        <p class="mb-0">© 2026 MOOD.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/student3.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
