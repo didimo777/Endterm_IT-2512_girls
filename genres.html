@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres | MOOD.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg mood-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MOOD<span>.</span></a>
+            <button class="navbar-toggler bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moods.html">Moods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="genres.html">Genres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albums.html">Albums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="discover.html">Discover</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="page-header">
+        <div class="container">
+            <p class="section-label">Explore your sound</p>
+            <h1>GENRES.</h1>
+            <p class="section-text">
+                Every genre carries a different energy.
+                Explore the sounds behind your favorite moods.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-space">
+        <div class="container">
+
+            <div class="s2-controls">
+                <label for="genreSearch" class="s2-label">
+                    Explore music genres
+                </label>
+                <input type="search" id="genreSearch"
+                       class="form-control s2-search"
+                       placeholder="Search genres...">
+
+                <div class="s2-filters mt-3" id="genreFilters">
+                    <button class="s2-filter active" data-energy="All" aria-pressed="true">All</button>
+                    <button class="s2-filter" data-energy="Chill" aria-pressed="false">Chill</button>
+                    <button class="s2-filter" data-energy="Upbeat" aria-pressed="false">Upbeat</button>
+                    <button class="s2-filter" data-energy="Intense" aria-pressed="false">Intense</button>
+                </div>
+
+                <div class="s2-toolbar">
+                    <p id="genreCount" aria-live="polite"></p>
+                    <button id="genreSort" class="s2-filter" type="button">
+                        Sort A–Z
+                    </button>
+                </div>
+            </div>
+
+            <div id="genreGrid" class="s2-genre-grid"></div>
+
+            <p id="genreEmpty" class="s2-empty" hidden>
+                No genres found. Try another word.
+            </p>
+
+            <section id="genreDetails" class="s2-details" hidden>
+                <button id="closeGenre" class="s2-filter" type="button">
+                    Close recommendations ×
+                </button>
+                <p class="section-label mt-4">Your genre discovery</p>
+                <h2 id="genreDetailName"></h2>
+                <p id="genreDetailDescription"></p>
+                <h3>Artists to explore</h3>
+                <div id="genreArtists" class="s2-song-list"></div>
+            </section>
+
+        </div>
+    </section>
+
+    <section class="feature-strip">
+        <div class="container text-center">
+            <p class="text-uppercase fw-semibold">MORE THAN A GENRE</p>
+            <h2>Choose music by feeling,<br>not only by category.</h2>
+            <a href="moods.html" class="btn btn-dark rounded-pill px-4 py-3 mt-3">
+                Explore moods →
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-logo">MOOD.</div>
+        <p class="mb-0">Every feeling has a sound.</p>
+        <p class="mb-0">© 2026 MOOD.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="student2.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists | MOOD.</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg mood-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MOOD<span>.</span></a>
+
+            <button class="navbar-toggler bg-light" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moods.html">Moods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="artists.html">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="genres.html">Genres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="albums.html">Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discover.html">Discover</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-header">
+        <div class="container">
+            <p class="section-label">The voices behind the feelings</p>
+            <h1>ARTISTS.</h1>
+            <p class="section-text">
+                Discover the artists who turn emotions into music.
+                Find your favorite sound.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-space">
+        <div class="container">
+
+            <div class="s2-controls">
+
+                <label for="artistSearch" class="s2-label">
+                    Find your artist
+                </label>
+
+                <input
+                    type="search"
+                    id="artistSearch"
+                    class="form-control s2-search"
+                    placeholder="Search artists..."
+                    autocomplete="off"
+                >
+
+                <div class="s2-filters mt-3" id="artistFilters">
+                    <button type="button" class="s2-filter active" data-genre="All" aria-pressed="true">All</button>
+                    <button type="button" class="s2-filter" data-genre="R&B" aria-pressed="false">R&B</button>
+                    <button type="button" class="s2-filter" data-genre="Pop" aria-pressed="false">Pop</button>
+                    <button type="button" class="s2-filter" data-genre="Hip-Hop" aria-pressed="false">Hip-Hop</button>
+                    <button type="button" class="s2-filter" data-genre="Alternative" aria-pressed="false">Alternative</button>
+                </div>
+
+                <div class="s2-toolbar">
+                    <p id="artistCount" aria-live="polite"></p>
+
+                    <select id="artistSort" class="s2-select" aria-label="Sort artists">
+                        <option value="original">Original order</option>
+                        <option value="az">Name A–Z</option>
+                        <option value="za">Name Z–A</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="artistGrid" class="s2-artist-grid"></div>
+
+            <div id="artistEmpty" class="s2-empty" hidden>
+                No artists found. Try another search.
+            </div>
+
+            <section id="artistDetails" class="s2-details" hidden>
+
+                <button id="closeArtist" class="s2-filter" type="button">
+                    Close ×
+                </button>
+
+                <div class="s2-detail-content">
+
+                    <img id="artistDetailImage" src="" alt="">
+
+                    <div>
+                        <p class="section-label">ARTIST SPOTLIGHT</p>
+
+                        <h2 id="artistDetailName"></h2>
+
+                        <p id="artistDetailGenre"></p>
+
+                        <p id="artistDetailDescription"></p>
+
+                        <h3>Recommended songs</h3>
+
+                        <div id="artistSongs" class="s2-song-list"></div>
+
+                        <a
+                            id="artistSpotify"
+                            href="https://open.spotify.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="s2-spotify-btn"
+                        >
+                            ♫ Listen on Spotify ↗
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <section class="feature-strip">
+        <div class="container text-center">
+            <p class="text-uppercase fw-semibold">MOOD. DISCOVERY</p>
+            <h2>Find your next favorite sound.</h2>
+
+            <a href="discover.html" class="btn btn-dark rounded-pill px-4 py-3 mt-3">
+                Discover music →
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-logo">MOOD.</div>
+        <p class="mb-0">Every feeling has a sound.</p>
+        <p class="mb-0">© 2026 MOOD.</p>
+    </div>
+</footer>
+
+<style>
+.s2-spotify-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 14px 26px;
+    background: #1DB954;
+    color: #101010 !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.s2-spotify-btn:hover {
+    background: #1ed760;
+    color: #101010 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(29, 185, 84, 0.25);
+}
+
+.s2-spotify-btn:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="student2.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
